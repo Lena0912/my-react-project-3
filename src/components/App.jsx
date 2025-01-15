@@ -5,6 +5,7 @@ import ImageGallery from "./ImageGallery/ImageGallery";
 import SearchBar from "./SearchBar/SearchBar";
 import { FallingLines } from "react-loader-spinner";
 import LoadMoreBtn from "./LoadMoreBtn/LoadMoreBtn";
+import { Layout } from "./Layout";
 
 
  
@@ -46,7 +47,7 @@ const App = () => {
   };
 
   return (
-    <div>
+    <Layout>
       <SearchBar onSubmit={handleSearchSubmit} />
 
       {loading && (
@@ -65,7 +66,7 @@ const App = () => {
         <LoadMoreBtn onClick={handleLoadMore} />
       )}
       
-    </div>
+    </Layout>
   );
 };
 

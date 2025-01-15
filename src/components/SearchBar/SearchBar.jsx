@@ -1,5 +1,8 @@
+
 import { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
+import { SearchBarContainer, SearchBarInput, SearchButton, SearchInput } from "./SearchBar.styled";
+import { TbZoomScan } from "react-icons/tb";
 
 const SearchBar = ({onSubmit}) => {
     const [query, setQuery] = useState("");
@@ -19,21 +22,23 @@ const SearchBar = ({onSubmit}) => {
         setQuery("");
     }
     return (
-       <header>
-  <form onSubmit={handleSubmit}>
-    <input
-        type="text"
-        value={query}
-        onChange={handleInputChange}
-        autoComplete="off"
-        autoFocus
-        placeholder="Search images and photos"
-    />
-                <button type="submit">Search</button>
-                <Toaster/>
-  </form>
-</header>
-    )
+      <SearchBarContainer>
+        <SearchBarInput onSubmit={handleSubmit}>
+          <SearchInput
+            type="text"
+            value={query}
+            onChange={handleInputChange}
+            autoComplete="off"
+            autoFocus
+            placeholder="Search images and photos"
+          />
+          <SearchButton type="submit">
+            <TbZoomScan size={24}/>
+          </SearchButton>
+          <Toaster />
+        </SearchBarInput>
+      </SearchBarContainer>
+    );
 }
 
 export default SearchBar;

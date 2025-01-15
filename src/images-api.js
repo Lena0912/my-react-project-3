@@ -10,6 +10,7 @@ export const fetchImagesWithTopic = async (topic, page = 1) => {
       params: {
         query: topic,
         page: page,
+        per_page: 12,
         client_id: "CdnrM9OyHJSwmywp16PBRnhlau-1vTdu57G8Kc2vvRA",
       },
     });

@@ -9,16 +9,18 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
-    backgroundColor: "#ffffff",
+    width: "80%",
     padding: "20px",
     borderRadius: "10px",
-    maxWidth: "90%",
-    maxHeight: "90%",
-    overflow: "auto",
+    maxWidth: "900px",
+    height: "auto",
+    backgroundColor: "#ffffff",
+    boxShadow: "0 4px 12px rgba(0, 0, 0, 0.1)",
   },
   overlay: {
     backgroundColor: "rgba(0, 0, 0, 0.8)",
-  }, 
+    zIndex: "1000",
+  },
 };
 
 Modal.setAppElement("#root");

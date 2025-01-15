@@ -1,21 +1,19 @@
 
+
 import ImageCard from "../ImageCard/ImageCard";
+import { Gallery, ImageContainer } from "./ImageGallery.styled";
 
 const ImageGallery = ({ items }) => {
+  
     return (
-      <div
-        style={{
-          display: "grid",
-          gridTemplateColumns: "repeat(3, 1fr)",
-          gap: "10px",
-        }}
-      >
+      <Gallery>
         {items.map((image) => (
-          <ImageCard key={image.id} image={image} />
+          <ImageContainer key={image.id}>
+            <ImageCard image={image} />
+          </ImageContainer>
         ))}
-      </div>
+      </Gallery>
     );
-
 };
 
 export default ImageGallery;
